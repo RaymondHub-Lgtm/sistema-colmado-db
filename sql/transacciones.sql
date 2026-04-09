@@ -1,15 +1,18 @@
--- transaccion correcta
-
+TRANSACCION EXITOSA
 BEGIN;
 
-INSERT INTO pedidos (id_cliente) VALUES (1);
+INSERT INTO clientes (nombre, telefono)
+VALUES ('Carlos Perez', '809-555-0001');
 
 COMMIT;
 
--- transaccion fallida
-
+-- TRANSACCION FALLIDA (ROLLBACK)
 BEGIN;
 
-UPDATE productos SET stock = stock - 1000 WHERE id_producto = 1;
+INSERT INTO productos (nombre, precio, stock)
+VALUES ('Arroz', 25.50, 10);
+
+-- ERROR FORZADO (stock negativo)
+UPDATE productos SET stock = -5 WHERE id_producto = 1;
 
 ROLLBACK;
