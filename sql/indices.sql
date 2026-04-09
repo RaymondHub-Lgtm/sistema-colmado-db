@@ -1,8 +1,10 @@
--- indice para mejorar busquedas
+CONSULTA SIN INDICE
+EXPLAIN ANALYZE
+SELECT * FROM productos WHERE nombre = 'Arroz';
 
-CREATE INDEX idx_nombre_producto ON productos(nombre);
+-- CREAR INDICE
+CREATE INDEX idx_productos_nombre ON productos(nombre);
 
--- prueba de rendimiento
-
+-- CONSULTA CON INDICE
 EXPLAIN ANALYZE
 SELECT * FROM productos WHERE nombre = 'Arroz';
