@@ -16,3 +16,6 @@ VALUES ('Arroz', 25.50, 10);
 UPDATE productos SET stock = -5 WHERE id_producto = 1;
 
 ROLLBACK;
+
+-- VERIFICAR
+SELECT * FROM productos;
