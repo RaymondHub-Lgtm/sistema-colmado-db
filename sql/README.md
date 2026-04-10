@@ -15,6 +15,7 @@ sql/
   procedimientos.sql
   indices.sql
   transacciones.sql
+  paralelismo.sql
   fdw.sql
 
 docker-compose.yml
