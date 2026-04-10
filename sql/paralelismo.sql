@@ -1,0 +1,2 @@
+EXPLAIN ANALYZE
+SELECT COUNT(*) FROM detalle_pedido;
